@@ -1,0 +1,28 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "lib",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nadia5125/TeamProfileGenerator.git"
+  },
+  "author": "Nadia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nadia5125/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/Nadia5125/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "7.0.4",
+    "jest": "25.1.0",
+    "open": "7.0.1"
+  }
+}
