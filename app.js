@@ -54,18 +54,20 @@ function promptUser() {
     if (input.role === 'Manager') {
       return inquirer.prompt([
         {
-          message: "Enter your office number format 123 123 1234",
+          
+          message: "Enter your office number format 123 ",
           name: "officenumber",
           type: "any",
           default: () => {},
-          validate: function (officeNumber) {
-  
-              valid = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/.test(officeNumber)
+          validate: function (officeNumber) {  
+              
+              valid = /^(\()?\d{3}$/.test(officeNumber)
   
               if (valid) {
                   return true;
               } else {
-                  console.log(".  Enter a valid office number & format 123 123 1234")
+                  
+                  console.log(".  Enter a valid office number & format 123 ")
                   return false;
               }
           }
@@ -99,7 +101,7 @@ function promptUser() {
         const officenumber = roleQ.officenumber;
         const managerCard =
           `<div class="col-4">
-                  <div class="card bg-primary mb-3" style="max-width: 18rem;">
+                  <div class="card bg-primary mb-3" style="width: 20rem;">
                       <div class="card-header text-white">
                           <h5 class="card-title">${response.name}</h5>
                           <h5 class="card-subtitle">Manager</h5>
@@ -128,7 +130,7 @@ function promptUser() {
           const github = roleQ.github;
           const engineerCard =
             `<div class="col-4">
-                    <div class="card bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card bg-primary mb-3" style="width: 20rem;">
                         <div class="card-header text-white">
                             <h5 class="card-title">${response.name}</h5>
                             <h5 class="card-subtitle">Engineer</h5>
@@ -157,7 +159,7 @@ function promptUser() {
           const school = roleQ.school;
           const engineerCard =
             `<div class="col-4">
-                    <div class="card bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card bg-primary mb-3" style=" width: 20rem;">
                         <div class="card-header text-white">
                             <h5 class="card-title">${response.name}</h5>
                             <h5 class="card-subtitle">Intern</h5>
@@ -197,7 +199,7 @@ function promptUser() {
             ]
           }
         ])
-      }
+      };
 
       function iterate(answer) {
         if (answer.add === 'yes') {
